@@ -13,3 +13,5 @@ vim.keymap.set("v", "<leader>d", "\"_d")
 vim.keymap.set("x", "<leader>p", "\"_dP")
 
 vim.keymap.set("i", "jk", "<Esc>")
+
+vim.keymap.set("n", "<leader>w", ":w<cr>")
