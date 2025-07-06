@@ -15,3 +15,6 @@ vim.keymap.set("x", "<leader>p", "\"_dP")
 vim.keymap.set("i", "jk", "<Esc>")
 
 vim.keymap.set("n", "<leader>w", "<cmd>w<cr>")
+
+vim.keymap.set("v", "<leader>/", "I// <Esc>")
+vim.keymap.set("v", "<leader>u/", "<cmd>'<,'>s/\\/\\/ //g<cr><Esc>")
