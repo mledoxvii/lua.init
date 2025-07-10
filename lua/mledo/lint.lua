@@ -1,11 +1,11 @@
-vim.api.nvim_create_autocmd({ "BufWritePost" }, {
+vim.api.nvim_create_autocmd({ "BufWritePre" }, {
     callback = function()
         local file = vim.fn.expand("%:p")
 
         if string.sub(file, -6) == ".swift" then
-            vim.cmd("silent !swiftlint --fix --format " .. file)
+            vim.lsp.buf.format({ async = false })
         elseif string.sub(file, -3) == ".ts" then
-            vim.cmd("silent !npx prettier " .. file .. " --write")
+            vim.cmd("silent %!npx prettier --stdin-filepath " .. file)
         end
     end,
 })
