@@ -1,0 +1,33 @@
+snippet __view "View template"
+  import Foundation
+  import SwiftUI
+
+  struct $0: View {
+
+      var body: some View {
+          VStack {}
+      }
+  }
+
+  // MARK: - Preview
+  #Preview {
+      $0()
+  }
+
+snippet __framefill "Fill parent"
+  .frame(maxWidth: .infinity, maxHeight: .infinity)
+
+snippet __framefillwidth "Fill parent width"
+  .frame(maxWidth: .infinity)
+
+snippet __framefillheight "Fill parent height"
+  .frame(maxHeight: .infinity)
+
+snippet __framesquare "Squared frame"
+  .frame(width: $0, height: $0)
+
+snippet __envprop "Environment property"
+  @Environment(\.$0) var $0
+
+snippet __envobj "Environment object"
+  @Environment($0) var $1
